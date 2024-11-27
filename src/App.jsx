@@ -14,9 +14,7 @@ function App() {
   const handleClick = (movieId) => {
     setMovie((prev) => {
       const isLiked = !prev[movieId]
-      setCount((prevCount) => {
-        prevCount + (isLiked ? 1 : -1);
-      })
+      setCount((prevCount) => prevCount + (isLiked ? 1 : -1));
 
       return {
         ...prev,
@@ -38,7 +36,7 @@ function App() {
         </div>
         <div className="likes">
           <img src={heartWhitePicture} alt="There is Heart picture" />
-          <span>{count > 0 ? count : 0}</span> likes
+          <p>{count > 0 ? count : 0}</p>likes
         </div>
       </header>
 
